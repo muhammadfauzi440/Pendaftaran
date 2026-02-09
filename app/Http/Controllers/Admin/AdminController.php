@@ -2,10 +2,13 @@
 
 namespace App\Http\Controllers\Admin;
 
-use App\Http\Controllers\Controller;
-use Illuminate\Http\Request;
 use App\Models\Pendaftaran;
 use Illuminate\Support\Facades\DB;
+use App\Exports\PendaftaranExport;
+use Maatwebsite\Excel\Facades\Excel;
+use Barryvdh\DomPDF\Facade\Pdf;
+use App\Http\Controllers\Controller;
+use Illuminate\Http\Request;
 
 class AdminController extends Controller
 {
@@ -56,5 +59,18 @@ class AdminController extends Controller
             DB::rollBack();
             return back()->with('error', 'Terjadi kesalahan: ' . $e->getMessage());
         }
+    }
+
+    public function exportPdf()
+    {   
+        $pendaftarans = Pendaftaran::with(['user', 'instansi'])->latest()->get();
+
+        $pdf = Pdf::loadView('admin.pendaftaran.pdf', compact('pendaftarans'));
+        return $pdf->setPaper('a4', 'landscape')->download('laporan-pendaftaran.pdf');
+    }
+
+    public function exportExcel()
+    {
+        return Excel::download(new PendaftaranExport, 'laporan-pendaftaran-' . date('Y-m-d') . '.xlsx');
     }
 }

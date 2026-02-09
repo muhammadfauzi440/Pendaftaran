@@ -110,7 +110,7 @@
                 <form action="{{ route('admin.pendaftaran.updateStatus', $pendaftaran->id) }}" method="POST">
                     @csrf
                     <div class="mb-8">
-                        <label class="block text-[10px] font-black text-gray-500 uppercase mb-4 tracking-widest">Alasan Keputusan <span class="text-red-500">*</span></label>
+                        <label class="block text-[10px] font-black text-gray-500 uppercase mb-4 tracking-widest">Alasan dan Keputusan <span class="text-red-500">*</span></label>
                         <textarea name="catatan_admin" rows="6" required class="w-full bg-white/5 border border-white/10 rounded-2xl p-5 text-white text-sm focus:ring-red-500 focus:border-red-500 placeholder:text-gray-600" placeholder="Berikan catatan kepada pendaftar">{{ $pendaftaran->catatan_admin }}</textarea>
                     </div>
 

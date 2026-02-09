@@ -36,6 +36,9 @@ Route::middleware(['auth', 'role:admin'])->group(function () {
     Route::get('/admin/kelola-pendaftaran', [AdminController::class, 'index'])->name('admin.pendaftaran.index');
     Route::get('/admin/kelola-pendaftaran/{id}', [AdminController::class, 'show'])->name('admin.pendaftaran.show');
     Route::post('/admin/kelola-pendaftaran/{id}/update-status', [AdminController::class, 'updateStatus'])->name('admin.pendaftaran.updateStatus');
+
+    Route::get('/admin/export/excel', [AdminController::class, 'exportExcel'])->name('admin.export.excel');
+    Route::get('/admin/export/pdf', [AdminController::class, 'exportPdf'])->name('admin.export.pdf');
 });
 
 Route::middleware(['auth', 'role:user'])->group(function () {
