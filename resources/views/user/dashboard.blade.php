@@ -77,6 +77,16 @@
                                             class="text-gray-900 font-black text-sm">{{ $pendaftaran->instansi->nama_instansi ?? '-' }}</span>
                                     </div>
                                     <div class="flex justify-between border-b border-gray-50 pb-3">
+                                        <span class="text-gray-400 text-xs font-bold uppercase">Nama</span>
+                                        <span
+                                            class="text-gray-900 font-black text-sm">{{ $pendaftaran->user->name ?? '-' }}</span>
+                                    </div>
+                                    <div class="flex justify-between border-b border-gray-50 pb-3">
+                                        <span class="text-gray-400 text-xs font-bold uppercase">NIM / NISN</span>
+                                        <span
+                                            class="text-gray-900 font-black text-sm">{{ $pendaftaran->nim_nisn ?? '-' }}</span>
+                                    </div>
+                                    <div class="flex justify-between border-b border-gray-50 pb-3">
                                         <span class="text-gray-400 text-xs font-bold uppercase">Periode Magang</span>
                                         <span class="text-gray-900 font-black text-sm">
                                             {{ \Carbon\Carbon::parse($pendaftaran->tanggal_mulai)->format('d M') }} -
@@ -87,72 +97,6 @@
                                         <a href="/user/daftar"
                                             class="text-xs font-black text-red-600 hover:text-red-700 uppercase tracking-widest border-b-2 border-red-100">Lihat
                                             / Edit Detail &rarr;</a>
-                                    </div>
-                                </div>
-                            @else
-                                <div class="py-6 text-center">
-                                    <p class="text-gray-400 mb-8 italic text-sm">Anda belum melengkapi formulir
-                                        pendaftaran.</p>
-                                    <a href="/user/daftar"
-                                        class="inline-block bg-gray-900 text-white px-10 py-4 rounded-2xl text-xs font-black uppercase tracking-[0.2em] hover:bg-red-600 transition shadow-xl shadow-gray-200">
-                                        Daftar Sekarang
-                                    </a>
-                                </div>
-                            @endif
-                        </div>
-
-                        <div
-                            class="bg-white border-2 border-gray-50 p-8 rounded-[2.5rem] shadow-sm relative overflow-hidden">
-                            <h2 class="text-xs font-black text-gray-400 uppercase tracking-widest mb-6">Status
-                                Pendaftaran</h2>
-
-                            @if (isset($pendaftaran) && $pendaftaran)
-                                <div
-                                    class="inline-flex items-center px-6 py-2 rounded-full mb-6 font-black uppercase tracking-widest text-[10px]
-            {{ $pendaftaran->status == 'pending' ? 'bg-amber-50 text-amber-600' : '' }}
-            {{ $pendaftaran->status == 'diterima' ? 'bg-emerald-50 text-emerald-600' : '' }}
-            {{ $pendaftaran->status == 'ditolak' ? 'bg-red-50 text-red-600' : '' }}">
-                                    ● {{ strtoupper($pendaftaran->status) }}
-                                </div>
-
-                                @if ($pendaftaran->catatan_admin)
-                                    <div class="mb-8 p-5 rounded-3xl bg-gray-50 border border-gray-100">
-                                        <div class="flex items-center gap-2 mb-2">
-                                            <svg class="w-3 h-3 text-gray-400" fill="currentColor" viewBox="0 0 20 20">
-                                                <path
-                                                    d="M18 10c0 3.866-3.582 7-8 7a8.841 8.841 0 01-4.083-.98L2 17l1.338-3.123C2.493 12.767 2 11.434 2 10c0-3.866 3.582-7 8-7s8 3.134 8 7zM7 9H5v2h2V9zm8 0h-2v2h2V9zM9 9h2v2H9V9z">
-                                                </path>
-                                            </svg>
-                                            <span
-                                                class="text-[10px] font-black text-gray-400 uppercase tracking-widest">Pesan
-                                                Dari Admin GI:</span>
-                                        </div>
-                                        <p class="text-sm font-bold text-gray-700 leading-relaxed italic">
-                                            "{{ $pendaftaran->catatan_admin }}"
-                                        </p>
-                                    </div>
-                                @endif
-
-                                <div class="space-y-4">
-                                    <div class="flex justify-between border-b border-gray-50 pb-3">
-                                        <span
-                                            class="text-gray-400 text-xs font-bold uppercase tracking-tighter">Nama</span>
-                                        <span
-                                            class="text-gray-900 font-black text-sm">{{ $pendaftaran->user->name ?? '-' }}</span>
-                                    </div>
-                                    <div class="flex justify-between border-b border-gray-50 pb-3">
-                                        <span
-                                            class="text-gray-400 text-xs font-bold uppercase tracking-tighter">Instansi</span>
-                                        <span
-                                            class="text-gray-900 font-black text-sm">{{ $pendaftaran->instansi->nama_instansi ?? '-' }}</span>
-                                    </div>
-                                    <div class="flex justify-between border-b border-gray-50 pb-3">
-                                        <span
-                                            class="text-gray-400 text-xs font-bold uppercase tracking-tighter">Periode</span>
-                                        <span class="text-gray-900 font-black text-sm">
-                                            {{ \Carbon\Carbon::parse($pendaftaran->tanggal_mulai)->format('d M') }} -
-                                            {{ \Carbon\Carbon::parse($pendaftaran->tanggal_selesai)->format('d M Y') }}
-                                        </span>
                                     </div>
                                 </div>
                             @else
