@@ -1,0 +1,73 @@
+<?php
+
+namespace App\Http\Controllers;
+
+use Illuminate\Http\Request;
+use App\Models\User;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Hash;
+use Illuminate\Validation\Rules\Password;
+
+class ProfileController extends Controller
+{
+    public function index()
+    {   
+        $user = auth()->user();
+
+        if ($user->role == 'admin') {
+            $allUsers = User::where('id', '!=', $user->id)->orderBy('role', 'asc')->get();
+            return view('admin.akun', compact('allUsers'));
+        } else {
+            return view('user.akun', compact('user'));
+        }
+    }
+
+    public function update(Request $request)
+    {
+        $user = Auth::user();
+
+        $request->validate([
+            'name' => ['required', 'string', 'max:255'],
+            'email' => ['required', 'string', 'email', 'max:255', 'unique:users,email,' . $user->id],
+            'new_password' => ['nullable', 'confirmed', Password::defaults()],
+        ]);
+
+        $user->name = $request->name;
+        $user->email = $request->email;
+
+        if ($request->filled('new_password')) {
+            $user->password = Hash::make($request->new_password);
+        }
+
+        $user->save();
+
+        return back()->with('success', 'Profil berhasil diperbarui');
+    }
+
+    public function store(Request $request)
+    {
+        $request->validate([
+            'name' => 'required|string|max:255',
+            'email' => 'required|string|email|max:255|unique:users,email',
+            'password' => ['required', Password::defaults()],
+            'role' => 'required|in:admin,user',
+        ]);
+
+        User::create([
+            'name' => $request->name,
+            'email' => $request->email,
+            'password' => Hash::make($request->password),
+            'role' => $request->role,
+        ]);
+
+        return back()->with('success', 'Pengguna baru berhasil ditambahkan');
+    }
+
+    public function destroy($id)
+    {
+        $user = User::findOrFail($id);
+        $user->delete();
+
+        return back()->with('success', 'Pengguna berhasil dihapus');
+    }
+}
