@@ -30,7 +30,7 @@
                         <select name="instansi_id"
                             class="w-full bg-gray-50 border-2 border-gray-200 rounded-xl px-5 py-4 focus:border-red-500 focus:ring-0 transition"
                             required>
-                            <option value="">-- Pilih Instansi --</option>
+                            <option value="" disabled selected>-- Pilih Instansi --</option>
                             @foreach ($instansis as $inst)
                                 <option value="{{ $inst->id }}"
                                     {{ old('instansi_id', $pendaftaran->instansi_id ?? '') == $inst->id ? 'selected' : '' }}>

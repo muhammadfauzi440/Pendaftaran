@@ -59,7 +59,7 @@
                             <td class="px-8 py-6 text-right">
                                 <a href="{{ route('admin.pendaftaran.show', $p->id) }}"
                                     class="inline-block bg-gray-100 hover:bg-red-600 hover:text-white px-6 py-2.5 rounded-xl text-[10px] font-black uppercase transition-all shadow-sm">
-                                    Detail & Verifikasi &rarr;
+                                    Detail &rarr;
                                 </a>
                             </td>
                         </tr>

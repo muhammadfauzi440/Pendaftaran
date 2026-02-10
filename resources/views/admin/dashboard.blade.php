@@ -41,6 +41,15 @@
                 <span x-show="sidebarOpen" class="font-bold whitespace-nowrap">Data Pendaftar</span>
             </a>
 
+            <a href="{{ route('admin.instansi.index') }}"
+                class="flex items-center gap-4 px-4 py-3 {{ request()->routeIs('admin.instansi.*') ? 'bg-red-600' : 'text-gray-400' }} rounded-xl transition">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+                </svg>
+                <span x-show="sidebarOpen" class="font-bold">Data Instansi</span>
+            </a>
+
             <a href="{{ route('profile.index') }}"
                 class="flex items-center gap-4 px-4 py-3 rounded-lg transition-all {{ request()->routeIs('profile.*') ? 'bg-red-600 text-white' : 'text-gray-400 hover:bg-white/5' }}">
                 <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -83,7 +92,7 @@
                 @yield('content')
             @else
                 <div class="mb-10">
-                    <h1 class="text-2xl font-black text-gray-900">Dashboard Overview</h1>
+                    <h1 class="text-2xl font-black text-gray-900">Dashboard Admin</h1>
                     <p class="text-gray-500 text-sm">Statistik pendaftaran magang terbaru.</p>
                 </div>
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-6">

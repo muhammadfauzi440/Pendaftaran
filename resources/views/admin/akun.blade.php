@@ -23,6 +23,17 @@
                 </div>
             @endif
 
+            @if ($errors->any())
+                <div class="mb-4 p-4 bg-red-50 border-l-4 border-red-500 text-red-700 rounded-xl">
+                    <p class="text-xs font-black uppercase tracking-widest mb-2">Gagal Menambah Akun:</p>
+                    <ul class="list-disc list-inside text-xs font-bold">
+                        @foreach ($errors->all() as $error)
+                            <li>{{ $error }}</li>
+                        @endforeach
+                    </ul>
+                </div>
+            @endif
+
             <div class="bg-white/5 border border-white/10 rounded-[2.5rem] overflow-hidden backdrop-blur-sm">
                 <table class="w-full text-left">
                     <thead class="bg-white/5 text-[10px] font-black uppercase text-gray-500 tracking-widest">
@@ -77,7 +88,7 @@
                 <input type="email" name="email" placeholder="Email"
                     class="w-full bg-white border-2 border-gray-100 rounded-2xl px-6 py-4 text-gray-900 font-bold outline-none focus:border-red-600"
                     required>
-                <input type="password" name="password" placeholder="Password"
+                <input type="password" name="password" placeholder="Password (min. 6 karakter)"
                     class="w-full bg-white border-2 border-gray-100 rounded-2xl px-6 py-4 text-gray-900 font-bold outline-none focus:border-red-600"
                     required>
                 <select name="role"
