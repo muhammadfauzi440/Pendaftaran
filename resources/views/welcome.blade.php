@@ -136,11 +136,14 @@
                 <div class="relative z-10 max-w-2xl text-left">
                     <div
                         class="inline-block px-4 py-1 rounded-full border border-gray-700 bg-gray-800 text-xs font-bold uppercase mb-6 tracking-widest text-red-400">
-                        Bergabung dengan kami</div>
-                    <h2 class="text-4xl md:text-5xl font-black mb-8 leading-tight">Mulai Karir di Bidang IT.</h2>
-                    <p class="text-gray-400 text-lg mb-10 leading-relaxed">
-                        Kami membuka posisi untuk Programmer, Designer, dan Networking Specialist di workshop kami
-                        (Yogyakarta & Bantul).
+                        Program Magang 2026
+                    </div>
+                    <h2 class="text-4xl md:text-5xl font-black mb-6 leading-tight tracking-tight">
+                        Bangun Pengalaman <span class="text-red-600">Nyata.</span>
+                    </h2>
+                    <p class="text-gray-400 text-lg mb-10 leading-relaxed font-medium">
+                        Terbuka bagi siswa & mahasiswa untuk posisi Programmer, Designer, dan Networking di workshop
+                        Yogyakarta & Bantul.
                     </p>
                     <div class="flex flex-col sm:flex-row gap-6 items-start">
                         <a href="{{ route('register') }}"
