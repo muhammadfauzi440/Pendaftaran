@@ -32,12 +32,15 @@
             </a>
 
             <a href="{{ route('admin.pendaftaran.index') }}"
-                class="flex items-center gap-4 px-4 py-3 {{ Request::is('admin.pendaftaran.show') ? 'bg-red-600' : 'text-gray-400 hover:bg-gray-800' }} rounded-xl transition">
-                <svg class="w-5 h-5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                class="flex items-center gap-4 px-4 py-3 {{ request()->routeIs('admin.pendaftaran.*') ? 'bg-red-600 text-white' : 'text-gray-400 hover:bg-gray-800' }} rounded-xl transition">
+
+                <svg class="w-5 h-5 shrink-0 {{ request()->routeIs('admin.pendaftaran.*') ? 'text-white' : '' }}"
+                    fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                         d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z">
                     </path>
                 </svg>
+
                 <span x-show="sidebarOpen" class="font-bold whitespace-nowrap">Data Pendaftar</span>
             </a>
 
