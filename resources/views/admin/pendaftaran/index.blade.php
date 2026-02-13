@@ -44,7 +44,7 @@
                         <th class="px-8 py-5 text-left">Pendaftar</th>
                         <th class="px-8 py-5 text-left">Instansi</th>
                         <th class="px-8 py-5 text-center">Status</th>
-                        <th class="px-8 py-5 text-right">Aksi</th>
+                        <th class="px-8 py-5 text-center">Aksi</th>
                     </tr>
                 </thead>
                 <tbody class="divide-y divide-gray-50">

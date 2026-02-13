@@ -85,14 +85,17 @@
                                 {{ $i->tipe }}
                             </span>
                         </td>
-                        <td class="p-4">
-                            <form action="{{ route('admin.instansi.destroy', $i->id) }}" method="POST"
-                                onsubmit="return confirm('Yakin ingin hapus data ini')">
-                                @csrf
-                                @method('DELETE')
-                                <button type="submit"
-                                    class="bg-red-500 hover:bg-red-600 rounded-2xl text-sm font-bold text-white px-2 py-1 uppercase">Hapus</button>
-                            </form>
+                        <td class="px-6 p-4">
+                            <div class="flex justify-end gap-2">
+                                <a href="{{ route('admin.instansi.edit', $i->id) }}" class="hover:bg-blue-900 text-white bg-blue-600 hover:text-white px-4 py-2.5 rounded-xl text-[10px] font-black uppercase transition-all shadow-sm border border-red-100 hover:border-red-600">Edit</a>
+                                <form action="{{ route('admin.instansi.destroy', $i->id) }}" method="POST"
+                                    onsubmit="return confirm('Yakin ingin hapus data ini')">
+                                    @csrf
+                                    @method('DELETE')
+                                    <button type="submit"
+                                    class="hover:bg-red-900 text-white bg-red-600 hover:text-white px-4 py-2.5 rounded-xl text-[10px] font-black uppercase transition-all shadow-sm border border-red-100 hover:border-red-600">Hapus</button>
+                                </form>
+                            </div>
                         </td>
                     </tr>
                 @endforeach

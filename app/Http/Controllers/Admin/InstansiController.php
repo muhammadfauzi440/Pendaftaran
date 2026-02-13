@@ -32,6 +32,31 @@ class InstansiController extends Controller
         return view('admin.instansi.index', compact('instansis'));
     }
 
+    public function edit($id)
+    {
+        $instansi = Instansi::findOrFail($id);
+        return view('admin.instansi.edit', compact('instansi'));
+    }
+
+    public function update(Request $request, $id)
+    {
+        $instansi = Instansi::findOrFail($id);
+
+        $validated = $request->validate([
+            'nama_instansi' => 'required|string|max:255|unique:instansis,nama_instansi,' . $id,
+            'alamat_instansi' => 'required|string',
+            'kontak_instansi' => 'required|string',
+            'tipe' => 'required|in:sekolah,universitas',
+        ]);
+
+        try {
+            $instansi->update($validated);
+            return redirect()->route('admin.instansi.index')->with('success', 'Data Instansi berhasil diperbarui');
+        } catch (\Exception $e) {
+           return back()->withInput()->withErrors(['error' => 'Gagal memperbarui data']);
+        }
+    }
+
     public function store(Request $request)
     {
         $request->validate([
