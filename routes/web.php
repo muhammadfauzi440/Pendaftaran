@@ -1,13 +1,12 @@
 <?php
 
-use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Admin\AdminController;
+use App\Http\Controllers\Admin\InstansiController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\PendaftaranController;
-use App\Http\Controllers\Admin\AdminController;
-use App\Http\Controllers\Admin\InstansiController;
 use App\Http\Controllers\ProfileController;
-
+use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('welcome');
@@ -38,6 +37,9 @@ Route::middleware(['auth', 'role:admin'])->group(function () {
 
     Route::get('/admin/kelola-pendaftaran', [AdminController::class, 'index'])->name('admin.pendaftaran.index');
     Route::get('/admin/kelola-pendaftaran/{id}', [AdminController::class, 'show'])->name('admin.pendaftaran.show');
+    Route::get('/admin/kelola-pendaftaran/{id}/edit', [AdminController::class, 'edit'])->name('admin.pendaftaran.edit');
+    Route::put('/admin/kelola-pendaftaran/{id}', [AdminController::class, 'update'])->name('admin.pendaftaran.update');
+    Route::delete('/admin/kelola-pendaftaran/{id}', [AdminController::class, 'destroy'])->name('admin.pendaftaran.destroy');
     Route::post('/admin/kelola-pendaftaran/{id}/update-status', [AdminController::class, 'updateStatus'])->name('admin.pendaftaran.updateStatus');
 
     Route::get('/admin/export/excel', [AdminController::class, 'exportExcel'])->name('admin.export.excel');

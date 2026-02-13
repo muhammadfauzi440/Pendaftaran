@@ -29,6 +29,14 @@
             </div>
         </div>
 
+        @if (session('success'))
+            <div class="mb-6 p-4 bg-emerald-50 border-l-4 border-emerald-600 rounded-r-2xl">
+                <p class="text-emerald-600 font-bold text-xs uppercase tracking-widest">
+                    {{ session('success') }}
+                </p>
+            </div>
+        @endif
+
         <div class="bg-white border-2 border-gray-50 rounded-[2.5rem] shadow-sm overflow-hidden">
             <table class="w-full">
                 <thead class="bg-gray-900 text-white text-[10px] font-black uppercase tracking-[0.2em]">
@@ -56,11 +64,29 @@
                                     {{ $p->status }}
                                 </span>
                             </td>
-                            <td class="px-8 py-6 text-right">
-                                <a href="{{ route('admin.pendaftaran.show', $p->id) }}"
-                                    class="inline-block bg-gray-100 hover:bg-red-600 hover:text-white px-6 py-2.5 rounded-xl text-[10px] font-black uppercase transition-all shadow-sm">
-                                    Detail &rarr;
-                                </a>
+                            <td class="px-8 py-6">
+                                <div class="flex justify-end items-center gap-2">
+                                    <a href="{{ route('admin.pendaftaran.show', $p->id) }}"
+                                        class="bg-gray-100 hover:bg-gray-900 hover:text-white px-4 py-2.5 rounded-xl text-[10px] font-black uppercase transition-all shadow-sm group"
+                                        title="Lihat Detail">
+                                        Detail
+                                    </a>
+                                    <a href="{{ route('admin.pendaftaran.edit', $p->id) }}"
+                                        class="bg-gray-100 hover:bg-blue-600 hover:text-white px-4 py-2.5 rounded-xl text-[10px] font-black uppercase transition-all shadow-sm"
+                                        title="Edit Data">
+                                        Edit
+                                    </a>
+                                    <form action="{{ route('admin.pendaftaran.destroy', $p->id) }}" method="POST"
+                                        onsubmit="return confirm('Hapus permanen data {{ $p->user->name }}?')"
+                                        class="inline">
+                                        @csrf
+                                        @method('DELETE')
+                                        <button type="submit"
+                                            class=" hover:bg-red-900 text-white bg-red-600 hover:text-white px-4 py-2.5 rounded-xl text-[10px] font-black uppercase transition-all shadow-sm border border-red-100 hover:border-red-600">
+                                            Hapus
+                                        </button>
+                                    </form>
+                                </div>
                             </td>
                         </tr>
                     @endforeach
