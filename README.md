@@ -42,3 +42,17 @@ npm install
 Salin fle `.env.example` menjadi `.env`:
 ```bash
 cp .env.example .env
+```
+Buka file `.env` dan sesuaikan nama database:
+```
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=form_pendaftaran
+DB_USERNAME=root
+DB_PASSWORD=
+```
+### 5. Generate Application Key
+```
+
+```
