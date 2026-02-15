@@ -62,3 +62,15 @@ Pastikan database dengan nama `form_pendaftaran` sudah dibuat di database, lalu 
 ```bash
 php artisan migrate --seed
 ```
+### 7. Storage Link
+Agar file dokumen yang diunggah bisa diakses secara publik:
+```bash
+php artisan storage:link
+```
+
+### 8. Jalankan Server
+Jalankan server lokal Laravel
+```bash
+php artisan serve
+```
+Akses di browser melalui `http://127.0.0.1:8000`
