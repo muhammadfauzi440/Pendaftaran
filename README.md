@@ -57,3 +57,8 @@ Jalankan ini untuk membuat kunci keamanan aplikasi:
 ```bash
 php artisan key:generate
 ```
+### 6. Migrasi & Seeder Database
+Pastikan database dengan nama `form_pendaftaran` sudah dibuat di database, lalu jalankan:
+```bash
+php artisan migrate --seed
+```
