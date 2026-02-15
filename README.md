@@ -28,9 +28,8 @@ Buka terminal atau CMD, arahkan ke folder `htdocs` (jika menggunakan XAMPP), lal
 git clone [https://github.com/muhammadfauzi440/Pendaftaran.git](https://github.com/muhammadfauzi440/Pendaftaran.git)
 cd Pendaftaran
 ```
-```
-3. Instalasi Dependency
+### Instalasi Dependency
 Instal library PHP melalui Composer:
 
-Bash
+```bash
 composer install
