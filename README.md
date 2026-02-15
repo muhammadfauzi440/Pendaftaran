@@ -33,3 +33,11 @@ Instal library PHP melalui Composer:
 
 ```bash
 composer install
+```
+### Instal asset frontend melalui NPM:
+```bash
+npm install
+```
+### 4. Konfigurasi Environment
+```bash
+cp .env.example .env
