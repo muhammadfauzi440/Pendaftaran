@@ -76,5 +76,5 @@ php artisan serve
 Akses di browser melalui `http://127.0.0.1:8000`
 
 ## Akun Akses Demo
-- **Admin**: admin@gi.com | **Password**: admin123 
-- **User**: testing@gmail.com | **Pasword**: 123456
+- **Admin**: `admin@gi.com` | **Password**: `admin123` 
+- **User**: `testing@gmail.com` | **Pasword**: `123456`
