@@ -53,6 +53,7 @@ DB_USERNAME=root
 DB_PASSWORD=
 ```
 ### 5. Generate Application Key
-```
-
+Jalankan ini untuk membuat kunci keamanan aplikasi:
+```bash
+php artisan key:generate
 ```
