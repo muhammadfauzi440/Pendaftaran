@@ -39,6 +39,6 @@ composer install
 npm install
 ```
 ### 4. Konfigurasi Environment
-Salin fle `.env.example` menjadi `.env`
+Salin fle `.env.example` menjadi `.env`:
 ```bash
 cp .env.example .env
