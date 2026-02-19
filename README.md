@@ -23,7 +23,7 @@ Pastikan komputer Anda sudah terinstal:
 - Node.js & NPM
 
 ### 2. Clone Repository
-Buka terminal atau CMD, arahkan ke folder `htdocs` (jika menggunakan XAMPP), lalu jalankan:
+Buka terminal atau CMD, arahkan ke folder `htdocs` (jika menggunakan XAMPP),atau `www` jika menggunakan laragon lalu jalankan:
 ```bash
 git clone [https://github.com/muhammadfauzi440/Pendaftaran.git](https://github.com/muhammadfauzi440/Pendaftaran.git)
 cd Pendaftaran
