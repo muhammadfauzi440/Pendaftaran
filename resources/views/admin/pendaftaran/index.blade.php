@@ -55,7 +55,7 @@
                                 <div class="text-[10px] text-gray-400 font-bold uppercase">{{ $p->nim_nisn }}</div>
                             </td>
                             <td class="px-8 py-6 text-sm font-bold text-gray-600">
-                                {{ $p->instansi->nama_instansi }}
+                                {{ $p->instansi->nama_instansi ?? 'Instansi tidak ditemukan' }}
                             </td>
                             <td class="px-8 py-6 text-center">
                                 <span
