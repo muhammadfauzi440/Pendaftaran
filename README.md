@@ -34,7 +34,7 @@ Instal library PHP melalui Composer:
 ```bash
 composer install
 ```
-### Instal asset frontend melalui NPM:
+Instal asset frontend melalui NPM:
 ```bash
 npm install
 ```
