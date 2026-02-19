@@ -10,7 +10,7 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
 class Pendaftaran extends Model
 {
     protected $guarded = ['id'];
-    protected $table = 'pendaftaran';
+    protected $table = 'pendaftarans';
     protected $fillable = [
         'user_id',
         'instansi_id',

@@ -7,7 +7,7 @@ use App\Models\Pendaftaran;
 class Instansi extends Model
 {
 
-    protected $table = 'instansi';
+    protected $table = 'instansis';
     protected $fillable = [
         'nama_instansi',
         'alamat_instansi',
