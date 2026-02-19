@@ -25,7 +25,7 @@ Pastikan komputer Anda sudah terinstal:
 ### 2. Clone Repository
 Buka terminal atau CMD, arahkan ke folder `htdocs` (jika menggunakan XAMPP),atau `www` (jika menggunakan laragon) lalu jalankan:
 ```bash
-git clone [https://github.com/muhammadfauzi440/Pendaftaran.git](https://github.com/muhammadfauzi440/Pendaftaran.git)
+git clone https://github.com/muhammadfauzi440/Pendaftaran.git
 cd Pendaftaran
 ```
 ### 3. Instalasi Dependency
