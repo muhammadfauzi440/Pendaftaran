@@ -6,6 +6,8 @@ use Illuminate\Database\Eloquent\Model;
 use App\Models\Pendaftaran;
 class Instansi extends Model
 {
+
+    protected $table = 'instansi';
     protected $fillable = [
         'nama_instansi',
         'alamat_instansi',

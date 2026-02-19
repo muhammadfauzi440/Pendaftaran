@@ -6,6 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 use App\Models\Pendaftaran;
 class Dokumen extends Model
 {
+    protected $table = 'dokumen';
     protected $fillable = [
         'pendaftaran_id',
         'tipe_dokumen',
