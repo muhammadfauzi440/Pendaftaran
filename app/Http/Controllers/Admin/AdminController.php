@@ -16,7 +16,7 @@ class AdminController extends Controller
 {
     public function index()
     {
-        $pendaftarans = Pendaftaran::with(['user', 'instansi'])->latest()->get();
+        $pendaftarans = Pendaftaran::with(['user', 'instansi', 'dokumen'])->latest()->get();
 
         return view('admin.pendaftaran.index', compact('pendaftarans'));
     }
