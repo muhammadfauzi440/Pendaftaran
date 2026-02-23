@@ -59,7 +59,7 @@
                         placeholder="••••••••" required autocomplete="current-password">
                 </div>
 
-                <button type="submit" class="w-full py-4 bg-gray-900 text-white font-black rounded-xl hover:bg-black transition-all transform hover:-translate-y-1 shadow-lg shadow-gray-900/20 uppercase tracking-widest text-xs">
+                <button type="submit" class="w-full py-4 bg-red-600 text-white font-black rounded-xl hover:bg-red-700 transition-all transform hover:-translate-y-1 shadow-lg shadow-gray-900/20 uppercase tracking-widest text-xs">
                     Masuk Sekarang
                 </button>
             </form>
