@@ -25,7 +25,7 @@
     <nav class="fixed w-full z-50 top-0 border-b border-gray-100 glass-nav backdrop-blur-xl bg-white/85">
         <div class="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
             <a href="/" class="flex items-center">
-                <img src="gambar/logo_gi.png" alt="Logo GI" class="h-auto">
+                <img src="gambar/logo_gi.png" alt="Logo GI" class="w-32 h-auto">
             </a>
 
             <div
@@ -40,7 +40,7 @@
                     class="text-sm font-bold text-gray-700 hover:text-red-600 transition">REGISTER</a>
 
                 <a href="{{ route('login') }}"
-                    class="hidden sm:block px-6 py-2.5 bg-gray-900 text-white text-sm font-bold rounded-lg hover:bg-gray-800 transition">LOGIN</a>
+                    class=" sm:block px-6 py-2.5 bg-gray-900 text-white text-sm font-bold rounded-lg hover:bg-gray-800 transition">LOGIN</a>
             </div>
         </div>
     </nav>
