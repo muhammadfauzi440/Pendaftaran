@@ -35,7 +35,7 @@
 
             <div class="relative z-10 mb-8">
                 <a href="/"
-                    class="inline-flex items-center gap-2 text-gray-400 hover:text-red-600 transition-all mb-6 group">
+                    class="inline-flex items-center gap-2 text-red-600 hover:text-red-700 transition-all mb-6 group">
                     <svg class="w-4 h-4 transform group-hover:-translate-x-1 transition-all" fill="none"
                         stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
