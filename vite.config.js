@@ -6,8 +6,7 @@ export default defineConfig({
     server: {
         host: '0.0.0.0',
         hmr: {
-            host: 'https://tendenciously-unscrupled-delmer.ngrok-free.dev',
-            protocol: 'wss',
+            host: '192.168.200.121'
         },
         watch: {
             ignored: ['**/storage/framework/views/**'],
