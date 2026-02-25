@@ -171,7 +171,7 @@
                                 <div>
                                     <label class="block text-[10px] font-black text-gray-400 uppercase mb-2">Jenis
                                         Dokumen</label>
-                                    <input type="text" name="tipe_dokumen[]" value="{{ $dok->tipe_dokumen }}"
+                                    <input type="text" name="tipe_dokumen[]" value="{{ $dok->tipe_dokumen }}" disabled
                                         class="w-full bg-white border-2 border-gray-200 rounded-xl px-4 py-3" required>
                                 </div>
                                 <div class="flex flex-col gap-2">
@@ -193,7 +193,7 @@
                             class="grid grid-cols-1 md:grid-cols-2 gap-4 bg-gray-50 p-6 rounded-2xl border-2 border-gray-100 items-end">
                             <div>
                                 <select name="tipe_dokumen[]" id="tipe_dokumen_select" class="w-full bg-white border-2 border-gray-200 rounded-xl px-4 py-3">
-                                    <option value="">Pilih Jenis Dokumen</option>
+                                    <option value="" selected disabled>Pilih Jenis Dokumen</option>
                                     <option value="CV">CV</option>
                                     <option value="Surat Pengantar">Surat Pengantar</option>
                                 </select>
