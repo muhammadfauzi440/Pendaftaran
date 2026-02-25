@@ -33,6 +33,7 @@
                 <a href="#home" class="hover:text-red-600 transition">Beranda</a>
                 <a href="#alur-magang" class="hover:text-red-600 transition">Alur Magang</a>
                 <a href="#magang" class="hover:text-red-600 transition">Gabung</a>
+                <a href="#contact" class="hover:text-red-600 transition">Kontak</a>
             </div>
 
             <div class="flex items-center gap-4">
