@@ -4,7 +4,7 @@
     <div class="max-w-6xl mx-auto">
         <div class="flex justify-between items-end mb-10">
             <div>
-                <h1 class="text-4xl font-black text-gray-900 uppercase tracking-tighter">Kelola Pendaftar</h1>
+                <h1 class="text-2xl font-black text-gray-900 uppercase tracking-tighter">Kelola Pendaftar</h1>
                 <p class="text-gray-500 font-bold mb-4">Total pengajuan masuk: {{ $pendaftarans->count() }}</p>
 
                 <div class="flex flex-wrap gap-3 mb-6">

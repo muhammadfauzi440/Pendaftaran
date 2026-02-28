@@ -98,7 +98,7 @@
                 @yield('content')
             @else
                 <div class="mb-10">
-                    <h1 class="text-2xl font-black text-gray-900">Dashboard Admin</h1>
+                    <h1 class="text-2xl uppercase font-black text-gray-900">Dashboard Admin</h1>
                     <p class="text-gray-500 text-sm">Statistik pendaftaran magang terbaru.</p>
                 </div>
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
